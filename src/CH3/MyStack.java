@@ -4,6 +4,9 @@ public class MyStack {
     private int top;
     private int[] stack;
 
+    public void cleanStack(){
+         top = -1;
+    }
     public MyStack(int n) {
         top = -1;
         stack = new int[n];
@@ -27,7 +30,7 @@ public class MyStack {
             System.out.println("Stack is full");
             return false;
         }else{
-            System.out.printf("push %d into stack\n", x);
+            //System.out.printf("push %d into stack\n", x);
             stack[++top] = x;
             return true;
         }
