@@ -1,6 +1,6 @@
 package CH3;
 
-public class ch3Main {
+public class ch3StackMain {
     public static void main(String[] args) {
 
         //Stack operation
@@ -56,6 +56,22 @@ public class ch3Main {
         System.out.printf("abba is %b a palindrome.\n", isPalindrome("abba"));
         System.out.printf("abccby is %b a palindrome.\n", isPalindrome("abccby"));
         System.out.printf("abcib is %b a palindrome.\n", isPalindrome("abcib"));
+
+        //Shared Array for two Stack
+        SharedStack array = new SharedStack(5);
+        array.push(1, 1);
+        array.push(1, 2);
+        array.push(1, 3);
+        array.push(2, 500);
+        array.push(2, 600);
+        array.push(2, 700);
+        System.out.println(array.pop(1));
+        System.out.println(array.pop(1));
+        System.out.println(array.pop(2));
+        array.push(2, 700);
+        System.out.println(array.pop(1));
+        System.out.println(array.pop(1));
+        System.out.println(array.pop(2));
     }
 
 
